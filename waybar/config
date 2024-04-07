@@ -1,20 +1,22 @@
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 43,
-    //"spacing": 4, // Gaps between modules (4px)
+    "position": "left", // Waybar position (top|bottom|left|right)
+    // "height": 100%,
+    // "width": 10,
+    "spacing": 20, // Gaps between modules (4px)
 
     // Choose the order of the modules
-    "modules-left": ["tray"],
+    "modules-left": ["clock", "tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["idle_inhibitor", "memory", "cpu", "temperature", "pulseaudio", "clock"],
+    // "modules-right": ["clock", "memory", "cpu", "temperature", "pulseaudio"],
+    "modules-right": ["memory", "cpu", "temperature", "pulseaudio"],
 
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{icon}",
+        "format": "{icon} ",
         "format-icons": {
              "1":"",
              "2":"",
@@ -26,6 +28,16 @@
              "8":"",
              "9":"",
              "10":"",
+             "11":"",
+             "12":"",
+             "13":"",
+             "14":"",
+             "15":"",
+             "16":"",
+             "17":"",
+             "18":"",
+             "19":"",
+             "20":"",
         }
     },
     "idle_inhibitor": {
@@ -36,11 +48,11 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 21,
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
+        "timezone": "Europe/Belgrade",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -49,7 +61,7 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{percentage}% "
     },
     "temperature": {
         // "thermal-zone": 2,
